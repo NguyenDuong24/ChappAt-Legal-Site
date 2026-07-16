@@ -19,7 +19,7 @@
             <div class="content-box">
                 <a href="index.html" class="back-link">&larr; Legal Center</a>
                 <h1>Privacy Policy</h1>
-                <span class="last-updated">Last updated: June 25, 2026</span>
+                <span class="last-updated">Last updated: July 16, 2026</span>
                 <div class="legal-body">
                     <p><strong>SaiGon Match</strong> (package name: <strong>saigonmatch.com.vn</strong>) is a free social matching, chat, discovery, group, media sharing, calling, and community app. This Privacy Policy explains how SaiGon Match and its developer account <strong>duongnguyen1263</strong> collect, use, share, protect, retain, and delete user data.</p>
                     <p>SaiGon Match is currently a <strong>completely free application</strong> with no in-app purchases, subscriptions, or paid features. If you do not agree with this Privacy Policy, please stop using SaiGon Match. For privacy requests, contact <a href="mailto:supportsaigonmatch@gmail.com">supportsaigonmatch@gmail.com</a>.</p>
@@ -58,17 +58,34 @@
                         <li><strong>Google AdMob:</strong> to serve in-app advertisements. AdMob may collect device identifiers for ad personalization. You can disable personalized ads in your device settings under Google &rarr; Ads &rarr; Opt out of Ads Personalization.</li>
                     </ul>
 
-                    <h2>5. Data Security & Safety Controls</h2>
+                    <h2>5. Third-Party AI Integration &amp; Data Use</h2>
+                    <p>SaiGon Match uses a third-party AI service (OpenRouter, powered by Google Gemma) to provide the AI Matchmaker feature. In full compliance with Google Play's User Data policy requirements for third-party AI integrations, we disclose the following:</p>
+                    <ul>
+                        <li><strong>Limited Use:</strong> Data sent to the AI Matchmaker — your natural-language search prompt and anonymized preference signals — is used solely to generate match suggestions within the app. It is not used to train external AI models, sold, or transferred to any party beyond what is necessary to operate this feature.</li>
+                        <li><strong>Disclosure:</strong> When you use the AI Matchmaker, your search query and general profile context (age range preference, interests, and general location area) are transmitted to our backend server, which calls the OpenRouter API. No raw personal identifiers such as your email address, phone number, precise GPS coordinates, or government ID are sent to the AI service.</li>
+                        <li><strong>Consent:</strong> By using the AI Matchmaker feature, you consent to this limited data processing as described above. Use of this feature is entirely optional. You can stop at any time by not using the AI Matchmaker screen.</li>
+                        <li><strong>On-Device AI (NSFW Moderation):</strong> SaiGon Match also uses on-device machine learning (NSFW.js / TensorFlow.js) to screen images locally before upload. This processing happens entirely on your device. No image data is transmitted to any external AI service for this moderation purpose.</li>
+                    </ul>
+
+                    <h2>6. Location Data: Precise vs. Approximate</h2>
+                    <p>In compliance with Google Play Data Safety section disclosure requirements, we clarify exactly how each location type is used:</p>
+                    <ul>
+                        <li><strong>Precise Location (GPS / ACCESS_FINE_LOCATION):</strong> Collected when you actively use the proximity radar, "Chạm Sóng" nearby detection, crossing-paths matching, or hotspot features. Precise coordinates are processed in real-time to calculate distances and surface nearby users. Coordinates are stored as a geohash (not raw lat/lon) in Firestore and are not shared with third parties beyond Firebase infrastructure.</li>
+                        <li><strong>Approximate Location (ACCESS_COARSE_LOCATION):</strong> Used as a fallback for city-level discovery and general matching when precise GPS is unavailable or not permitted by you.</li>
+                        <li><strong>Background Location (ACCESS_BACKGROUND_LOCATION):</strong> Collected only when you explicitly grant background location permission via your device's system settings. This enables proximity notifications and nearby match alerts while the app is not in the foreground. This permission is fully optional. You can revoke it at any time: <em>Settings &rarr; Apps &rarr; SaiGon Match &rarr; Permissions &rarr; Location &rarr; Allow only while using the app</em>.</li>
+                    </ul>
+
+                    <h2>7. Data Security & Safety Controls</h2>
                     <p>We apply robust technical safeguards, including SSL/TLS encryption for all data transmissions, Firestore security rules, secure backend APIs, and AI-driven NSFW content moderation systems to protect your information. No system can guarantee 100% security.</p>
 
-                    <h2>6. Data Retention Policy</h2>
+                    <h2>8. Data Retention Policy</h2>
                     <ul>
                         <li><strong>Active accounts:</strong> data is kept as long as your profile is active.</li>
                         <li><strong>Deleted accounts:</strong> profile data is permanently erased within 30 days of a verified deletion request.</li>
                         <li><strong>Safety & moderation logs:</strong> limited data (account bans, content moderation flags) may be retained permanently for safety enforcement and to prevent repeat abuse.</li>
                     </ul>
 
-                    <h2>7. Account Deletion & Your Rights</h2>
+                    <h2>9. Account Deletion & Your Rights</h2>
                     <p>You can request full deletion of your account and all associated personal data at any time. To request deletion:</p>
                     <ul>
                         <li><strong>In-app:</strong> Settings &rarr; Privacy &rarr; Account Deletion</li>
@@ -76,10 +93,10 @@
                     </ul>
                     <p>We process verified deletion requests within 30 days. Once deleted, your data cannot be recovered.</p>
 
-                    <h2>8. Children's Privacy</h2>
+                    <h2>10. Children's Privacy</h2>
                     <p>SaiGon Match is strictly restricted to adults. <strong>You must be at least 18 years old</strong> to register and use this application. We do not knowingly collect personal data from children under 18. If we detect or are notified that a minor is using the app, their profile and all associated data will be permanently deleted immediately.</p>
 
-                    <h2>9. Contact Us</h2>
+                    <h2>11. Contact Us</h2>
                     <ul>
                         <li>App: SaiGon Match</li>
                         <li>Package name: saigonmatch.com.vn</li>
