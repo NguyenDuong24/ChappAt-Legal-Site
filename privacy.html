@@ -21,88 +21,111 @@
                 <h1>Privacy Policy</h1>
                 <span class="last-updated">Last updated: July 16, 2026</span>
                 <div class="legal-body">
-                    <p><strong>SaiGon Match</strong> (package name: <strong>saigonmatch.com.vn</strong>) is a free social matching, chat, discovery, group, media sharing, calling, and community app. This Privacy Policy explains how SaiGon Match and its developer account <strong>duongnguyen1263</strong> collect, use, share, protect, retain, and delete user data.</p>
-                    <p>SaiGon Match is currently a <strong>completely free application</strong> with no in-app purchases, subscriptions, or paid features. If you do not agree with this Privacy Policy, please stop using SaiGon Match. For privacy requests, contact <a href="mailto:supportsaigonmatch@gmail.com">supportsaigonmatch@gmail.com</a>.</p>
+
+                    <p><strong>SaiGon Match</strong> (Android package: <code>saigonmatch.com.vn</code>) is a free social matching, chat, discovery, and community app for adults. This Privacy Policy explains what personal data we collect, why we collect it, how we use and share it, and your rights regarding that data. It applies to the SaiGon Match mobile application operated by developer account <strong>duongnguyen1263</strong>.</p>
+                    <p>By creating an account or using SaiGon Match, you agree to this Privacy Policy. If you do not agree, please stop using the app and delete your account. For any privacy-related questions, contact us at <a href="mailto:supportsaigonmatch@gmail.com">supportsaigonmatch@gmail.com</a>.</p>
 
                     <h2>1. Data We Collect</h2>
-                    <p>Depending on the features you use and permissions you grant, we may collect:</p>
+                    <p>We collect only the data necessary to operate our services. Depending on the features you use and the permissions you grant, we may collect:</p>
                     <ul>
-                        <li><strong>Account & Profile Info:</strong> name, username, email, provider IDs (Google/Facebook), profile photo, age/date of birth, gender, bio, education, work, hometown, and relationship preferences.</li>
-                        <li><strong>User Content:</strong> social posts, comments, replies, reactions, private/group chat messages, photos, voice notes, and virtual gifts.</li>
-                        <li><strong>Location Data:</strong> precise and approximate GPS coordinates (only when you grant permission) used for radar, proximity search, hotspots, and distance display.</li>
-                        <li><strong>Background Location Data:</strong> when explicitly permitted, location may be collected while the app is closed or not in use to support continuous proximity notifications and nearby matching.</li>
-                        <li><strong>Camera & Microphone:</strong> photos/videos (for profiles or chat media) and real-time audio/video streams for VoIP call features.</li>
-                        <li><strong>Technical & Ad Data:</strong> device model, OS, IP address, crash logs, diagnostics, push notification tokens, and advertising identifiers (Google AdMob).</li>
+                        <li><strong>Account &amp; Profile Data:</strong> name, username, email address, sign-in provider IDs (Google, Facebook), profile photo, date of birth, gender, bio, education, occupation, hometown, and relationship preferences.</li>
+                        <li><strong>User-Generated Content:</strong> social posts, comments, reactions, private and group chat messages, photos, voice notes, and virtual gifts.</li>
+                        <li><strong>Precise Location (GPS):</strong> collected only when you grant the permission, and used for proximity radar, nearby user discovery, crossing-paths matching, hotspot recommendations, and distance display. Stored as a geohash in Firestore &mdash; not as raw coordinates.</li>
+                        <li><strong>Approximate Location:</strong> used as a fallback for city-level matching when precise GPS is unavailable or not permitted.</li>
+                        <li><strong>Background Location:</strong> collected only if you explicitly grant the &ldquo;Allow all the time&rdquo; location permission. Used solely to deliver proximity notifications and nearby-match alerts when the app is not in the foreground. This is entirely optional and revocable at any time in device settings.</li>
+                        <li><strong>Camera &amp; Microphone:</strong> photos and videos for profile and chat media; real-time audio and video streams for in-app VoIP calling.</li>
+                        <li><strong>Device &amp; Technical Data:</strong> device model, OS version, IP address, crash reports, diagnostics, push notification tokens, and advertising identifiers (used by Google AdMob).</li>
+                        <li><strong>AI Matchmaker Input:</strong> your natural-language search prompts, recent conversation history with the AI assistant, and your GPS coordinates (if permitted) when you use the optional AI Matchmaker feature.</li>
                     </ul>
 
-                    <h2>2. Why We Use Data</h2>
+                    <h2>2. How We Use Your Data</h2>
+                    <p>We use collected data only for the following purposes:</p>
                     <ul>
-                        <li>Authenticate profiles, maintain secure logins, and manage user accounts.</li>
-                        <li>Provide messaging, group chat, media uploads, calls, notifications, and social interactions.</li>
-                        <li>Run location-based matching, proximity radar, geohash discovery, and distance calculations.</li>
-                        <li>Serve personalized or non-personalized advertisements via Google AdMob.</li>
-                        <li>Moderate content, prevent fraud/spam, block offensive actors, and ensure user safety.</li>
+                        <li>Create and authenticate your account and maintain secure sessions.</li>
+                        <li>Provide core app features: messaging, group chat, media sharing, VoIP calls, social posts, and notifications.</li>
+                        <li>Power location-based features: proximity radar, nearby matching, geohash discovery, and distance calculations.</li>
+                        <li>Operate the AI Matchmaker to generate personalized match suggestions based on your prompts.</li>
+                        <li>Serve advertisements via Google AdMob (personalized or non-personalized).</li>
+                        <li>Detect and prevent fraud, spam, and abusive behavior; moderate content; and keep the community safe.</li>
+                        <li>Improve app performance, fix bugs, and develop new features.</li>
                     </ul>
 
-                    <h2>3. Prominent Background Location Disclosure</h2>
+                    <h2>3. Background Location &mdash; Prominent Disclosure</h2>
                     <div class="notice-box">
-                        <strong>This app collects location data to enable nearby user discovery, radar matching, hotspot discovery, crossing-path style discovery, distance display, and location-based safety features even when the app is closed or not in use.</strong>
+                        <strong>SaiGon Match collects location data &mdash; including while the app is closed or not in use &mdash; to power nearby user discovery, proximity radar, hotspot alerts, crossing-paths matching, and distance-based safety features.</strong>
                     </div>
-                    <p>Background location is completely optional and requires your explicit authorization. You can revoke location access at any time through your device's system settings.</p>
+                    <p>Background location collection requires your explicit &ldquo;Allow all the time&rdquo; permission. It is fully optional. You can change or revoke this permission at any time: <em>Device Settings &rarr; Apps &rarr; SaiGon Match &rarr; Permissions &rarr; Location &rarr; Allow only while using the app</em>.</p>
 
-                    <h2>4. Sharing & Service Providers</h2>
-                    <p><strong>We do not sell your personal data.</strong> We share data only with trusted service providers to run the app:</p>
+                    <h2>4. Location Data: Precise vs. Approximate</h2>
+                    <p>Google Play requires us to distinguish clearly between the types of location data we access:</p>
                     <ul>
-                        <li><strong>Firebase & Google Cloud:</strong> for secure authentication, real-time Firestore database, storage, cloud functions, and push notifications.</li>
-                        <li><strong>SDK integrations:</strong> Google Sign-In, Facebook Login (auth and graph identifiers), and VideoSDK/WebRTC (VoIP calling).</li>
-                        <li><strong>Google AdMob:</strong> to serve in-app advertisements. AdMob may collect device identifiers for ad personalization. You can disable personalized ads in your device settings under Google &rarr; Ads &rarr; Opt out of Ads Personalization.</li>
+                        <li><strong>Precise Location (ACCESS_FINE_LOCATION):</strong> Used when you actively engage proximity radar, &ldquo;Ch&#7841;m S&#243;ng&rdquo; nearby detection, crossing-paths, or hotspot features. Coordinates are converted to a geohash for storage in Firestore and are not shared with third parties beyond Firebase infrastructure. Also transmitted to our backend (in encrypted form) when you use the AI Matchmaker with location enabled, solely for distance-based match ranking.</li>
+                        <li><strong>Approximate Location (ACCESS_COARSE_LOCATION):</strong> Used as a fallback for city-level discovery when precise GPS is unavailable or denied.</li>
+                        <li><strong>Background Location (ACCESS_BACKGROUND_LOCATION):</strong> Optional. Collected only with explicit user permission. Used exclusively for proximity notifications and nearby-match alerts when the app is in the background or closed. Never used for advertising profiling.</li>
                     </ul>
 
-                    <h2>5. Third-Party AI Integration &amp; Data Use</h2>
-                    <p>SaiGon Match uses a third-party AI service (OpenRouter, powered by Google Gemma) to provide the AI Matchmaker feature. In full compliance with Google Play's User Data policy requirements for third-party AI integrations, we disclose the following:</p>
+                    <h2>5. Third-Party AI Service &mdash; User Data Disclosure</h2>
+                    <p>SaiGon Match includes an optional AI Matchmaker feature powered by a third-party AI service (OpenRouter API, model: Google Gemma). In compliance with Google Play&rsquo;s User Data policy requirements for third-party AI integrations:</p>
                     <ul>
-                        <li><strong>Limited Use:</strong> Data sent to the AI Matchmaker — your natural-language search prompt and anonymized preference signals — is used solely to generate match suggestions within the app. It is not used to train external AI models, sold, or transferred to any party beyond what is necessary to operate this feature.</li>
-                        <li><strong>Disclosure:</strong> When you use the AI Matchmaker, your search query and general profile context (age range preference, interests, and general location area) are transmitted to our backend server, which calls the OpenRouter API. No raw personal identifiers such as your email address, phone number, precise GPS coordinates, or government ID are sent to the AI service.</li>
-                        <li><strong>Consent:</strong> By using the AI Matchmaker feature, you consent to this limited data processing as described above. Use of this feature is entirely optional. You can stop at any time by not using the AI Matchmaker screen.</li>
-                        <li><strong>On-Device AI (NSFW Moderation):</strong> SaiGon Match also uses on-device machine learning (NSFW.js / TensorFlow.js) to screen images locally before upload. This processing happens entirely on your device. No image data is transmitted to any external AI service for this moderation purpose.</li>
+                        <li><strong>What is sent:</strong> When you use the AI Matchmaker, the following data is transmitted from your device to our secure backend server, which then calls the OpenRouter API:
+                            <ul>
+                                <li>Your search prompt (natural-language text you type)</li>
+                                <li>Up to 8 recent messages from your current AI conversation session</li>
+                                <li>Your precise GPS coordinates (only if location permission is granted), used for distance-based match ranking</li>
+                                <li>A list of user IDs to exclude from results</li>
+                            </ul>
+                        </li>
+                        <li><strong>What is NOT sent:</strong> Your email address, phone number, password, payment information, government ID, full profile photo, or any sensitive personal identifiers are never transmitted to any AI service.</li>
+                        <li><strong>Limited use:</strong> Data transmitted to OpenRouter is used solely to generate match suggestions in response to your query. It is not used to train AI models, build user profiles for advertising, sold, or shared beyond what is required to return results to you.</li>
+                        <li><strong>Consent:</strong> Use of the AI Matchmaker is entirely optional and requires no additional permissions beyond those already granted. You may use all other app features without ever using the AI Matchmaker.</li>
+                        <li><strong>On-device AI:</strong> Image content moderation (NSFW screening) is performed entirely on your device using TensorFlow.js before any upload. No image data is sent to any external AI service for moderation purposes.</li>
                     </ul>
 
-                    <h2>6. Location Data: Precise vs. Approximate</h2>
-                    <p>In compliance with Google Play Data Safety section disclosure requirements, we clarify exactly how each location type is used:</p>
+                    <h2>6. Data Sharing &amp; Service Providers</h2>
+                    <p><strong>We do not sell your personal data.</strong> We share data only with the following trusted service providers, strictly to operate the app:</p>
                     <ul>
-                        <li><strong>Precise Location (GPS / ACCESS_FINE_LOCATION):</strong> Collected when you actively use the proximity radar, "Chạm Sóng" nearby detection, crossing-paths matching, or hotspot features. Precise coordinates are processed in real-time to calculate distances and surface nearby users. Coordinates are stored as a geohash (not raw lat/lon) in Firestore and are not shared with third parties beyond Firebase infrastructure.</li>
-                        <li><strong>Approximate Location (ACCESS_COARSE_LOCATION):</strong> Used as a fallback for city-level discovery and general matching when precise GPS is unavailable or not permitted by you.</li>
-                        <li><strong>Background Location (ACCESS_BACKGROUND_LOCATION):</strong> Collected only when you explicitly grant background location permission via your device's system settings. This enables proximity notifications and nearby match alerts while the app is not in the foreground. This permission is fully optional. You can revoke it at any time: <em>Settings &rarr; Apps &rarr; SaiGon Match &rarr; Permissions &rarr; Location &rarr; Allow only while using the app</em>.</li>
+                        <li><strong>Firebase &amp; Google Cloud:</strong> authentication, Firestore database, Cloud Storage, Cloud Functions, and push notifications (FCM).</li>
+                        <li><strong>Google Sign-In / Facebook Login:</strong> authentication and account linking only. We receive provider IDs, not passwords.</li>
+                        <li><strong>VideoSDK / WebRTC:</strong> real-time audio and video call infrastructure. Call tokens are generated server-side; the API key is never exposed to the client.</li>
+                        <li><strong>Google AdMob:</strong> in-app advertising. AdMob may collect advertising identifiers. You can opt out of ad personalization in device settings: <em>Google &rarr; Ads &rarr; Opt out of Ads Personalization</em>.</li>
+                        <li><strong>OpenRouter (AI Matchmaker only):</strong> processes AI Matchmaker queries as described in Section 5 above. Used only when you actively engage this optional feature.</li>
                     </ul>
 
-                    <h2>7. Data Security & Safety Controls</h2>
-                    <p>We apply robust technical safeguards, including SSL/TLS encryption for all data transmissions, Firestore security rules, secure backend APIs, and AI-driven NSFW content moderation systems to protect your information. No system can guarantee 100% security.</p>
+                    <h2>7. Data Security</h2>
+                    <p>We protect your data with industry-standard safeguards: SSL/TLS encryption for all data in transit, Firestore security rules, Firebase App Check to prevent unauthorized API access, server-side secret management (API keys are never exposed to clients), and on-device NSFW AI moderation before any media upload. No system can guarantee absolute security, but we apply best practices throughout our infrastructure.</p>
 
-                    <h2>8. Data Retention Policy</h2>
+                    <h2>8. Data Retention</h2>
                     <ul>
-                        <li><strong>Active accounts:</strong> data is kept as long as your profile is active.</li>
-                        <li><strong>Deleted accounts:</strong> profile data is permanently erased within 30 days of a verified deletion request.</li>
-                        <li><strong>Safety & moderation logs:</strong> limited data (account bans, content moderation flags) may be retained permanently for safety enforcement and to prevent repeat abuse.</li>
+                        <li><strong>Active accounts:</strong> data is retained while your account exists.</li>
+                        <li><strong>Deleted accounts:</strong> all personal data is permanently deleted within 30 days of a verified deletion request.</li>
+                        <li><strong>Safety &amp; moderation logs:</strong> minimal data (ban records, content moderation flags) may be retained indefinitely to prevent repeat abuse and protect the community.</li>
+                        <li><strong>Automated backups:</strong> purged on standard rotation cycles.</li>
                     </ul>
 
-                    <h2>9. Account Deletion & Your Rights</h2>
-                    <p>You can request full deletion of your account and all associated personal data at any time. To request deletion:</p>
+                    <h2>9. Account Deletion &amp; Your Rights</h2>
+                    <p>You have the right to access, correct, or delete your personal data at any time.</p>
+                    <p>To delete your account and all associated data:</p>
                     <ul>
                         <li><strong>In-app:</strong> Settings &rarr; Privacy &rarr; Account Deletion</li>
-                        <li><strong>Web form:</strong> Visit our <a href="delete-account.html">Account Deletion</a> page and send us an email</li>
+                        <li><strong>Web:</strong> <a href="delete-account.html">Account Deletion Request page</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:supportsaigonmatch@gmail.com">supportsaigonmatch@gmail.com</a> with subject &ldquo;Account Deletion Request&rdquo;</li>
                     </ul>
-                    <p>We process verified deletion requests within 30 days. Once deleted, your data cannot be recovered.</p>
+                    <p>Deletion requests are processed within 30 days. Deleted data cannot be recovered.</p>
 
-                    <h2>10. Children's Privacy</h2>
-                    <p>SaiGon Match is strictly restricted to adults. <strong>You must be at least 18 years old</strong> to register and use this application. We do not knowingly collect personal data from children under 18. If we detect or are notified that a minor is using the app, their profile and all associated data will be permanently deleted immediately.</p>
+                    <h2>10. Children&rsquo;s Privacy</h2>
+                    <p>SaiGon Match is strictly for users aged 18 and older. We do not knowingly collect personal data from anyone under 18. Age is verified at registration; users who enter a date of birth indicating they are under 18 are blocked from creating an account. If we discover a minor has accessed the app, their account and all associated data are permanently deleted immediately. Parents or guardians who believe their child has created an account should contact us immediately at <a href="mailto:supportsaigonmatch@gmail.com">supportsaigonmatch@gmail.com</a>.</p>
 
-                    <h2>11. Contact Us</h2>
+                    <h2>11. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy as our app or applicable laws change. We will notify users of material changes via in-app notification. The &ldquo;Last updated&rdquo; date at the top of this page reflects the most recent revision. Continued use of the app after the effective date constitutes acceptance of the updated policy.</p>
+
+                    <h2>12. Contact Us</h2>
                     <ul>
-                        <li>App: SaiGon Match</li>
-                        <li>Package name: saigonmatch.com.vn</li>
-                        <li>Developer: duongnguyen1263</li>
-                        <li>Contact email: <a href="mailto:supportsaigonmatch@gmail.com">supportsaigonmatch@gmail.com</a></li>
+                        <li><strong>App:</strong> SaiGon Match</li>
+                        <li><strong>Package name:</strong> saigonmatch.com.vn</li>
+                        <li><strong>Developer account:</strong> duongnguyen1263</li>
+                        <li><strong>Email:</strong> <a href="mailto:supportsaigonmatch@gmail.com">supportsaigonmatch@gmail.com</a></li>
                     </ul>
+
                 </div>
             </div>
         </div>
