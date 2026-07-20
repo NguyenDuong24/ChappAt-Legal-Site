@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for SaiGon Match - A free social matching and community app. Package saigonmatch.com.vn.">
+    <meta name="description" content="Privacy Policy for SaiGon Match - Includes location data disclosure (GPS, precise and approximate location). Package saigonmatch.com.vn.">
     <title>Privacy Policy | SaiGon Match</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,11 +19,30 @@
             <div class="content-box">
                 <a href="index.html" class="back-link">&larr; Legal Center</a>
                 <h1>Privacy Policy</h1>
-                <span class="last-updated">Last updated: July 16, 2026</span>
+                <span class="last-updated">Last updated: July 20, 2026</span>
                 <div class="legal-body">
 
                     <p><strong>SaiGon Match</strong> (Android package: <code>saigonmatch.com.vn</code>) is a free social matching, chat, discovery, and community app for adults. This Privacy Policy explains what personal data we collect, why we collect it, how we use and share it, and your rights regarding that data. It applies to the SaiGon Match mobile application operated by developer account <strong>duongnguyen1263</strong>.</p>
                     <p>By creating an account or using SaiGon Match, you agree to this Privacy Policy. If you do not agree, please stop using the app and delete your account. For any privacy-related questions, contact us at <a href="mailto:supportsaigonmatch@gmail.com">supportsaigonmatch@gmail.com</a>.</p>
+
+                    <h2>Location Data Disclosure</h2>
+                    <div class="notice-box">
+                        <strong>This app accesses and collects LOCATION data (precise GPS and approximate location) from your device. Location data is used to power proximity features including nearby user discovery, radar scanning, distance display, and crossing-paths matching. This disclosure is required by Google Play policy.</strong>
+                    </div>
+                    <p>SaiGon Match accesses the following location permissions:</p>
+                    <ul>
+                        <li><strong>ACCESS_FINE_LOCATION (Precise GPS Location):</strong> The app accesses your precise GPS location when you use the Proximity Radar, nearby user discovery, or crossing-paths features. This data is used to find users near your physical location and calculate distances.</li>
+                        <li><strong>ACCESS_COARSE_LOCATION (Approximate Location):</strong> Used as a fallback for city-level user discovery when precise GPS is not available or permission is denied.</li>
+                        <li><strong>ACCESS_BACKGROUND_LOCATION (Background Location):</strong> Optionally collected when you grant &ldquo;Allow all the time&rdquo; permission, used only to deliver nearby-match alerts when the app is in the background. This permission is entirely optional and can be revoked at any time.</li>
+                    </ul>
+                    <p>Location data collected by this app is:</p>
+                    <ul>
+                        <li>Stored as a geohash (not raw coordinates) in our secure Firebase Firestore database</li>
+                        <li>Used exclusively for proximity matching and distance-based features within SaiGon Match</li>
+                        <li>Never sold to third parties</li>
+                        <li>Never used for advertising profiling</li>
+                        <li>Deleted when you delete your account</li>
+                    </ul>
 
                     <h2>1. Data We Collect</h2>
                     <p>We collect only the data necessary to operate our services. Depending on the features you use and the permissions you grant, we may collect:</p>
@@ -52,7 +71,7 @@
 
                     <h2>3. Background Location &mdash; Prominent Disclosure</h2>
                     <div class="notice-box">
-                        <strong>SaiGon Match collects location data &mdash; including while the app is closed or not in use &mdash; to power nearby user discovery, proximity radar, hotspot alerts, crossing-paths matching, and distance-based safety features.</strong>
+                        <strong>SaiGon Match collects location data &mdash; including while the app is closed or not in use &mdash; to power nearby user discovery, proximity radar, hotspot alerts, crossing-paths matching, and distance-based safety features. Location (including background location) is only collected after explicit user permission is granted and is never used for advertising.</strong>
                     </div>
                     <p>Background location collection requires your explicit &ldquo;Allow all the time&rdquo; permission. It is fully optional. You can change or revoke this permission at any time: <em>Device Settings &rarr; Apps &rarr; SaiGon Match &rarr; Permissions &rarr; Location &rarr; Allow only while using the app</em>.</p>
 
